@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "581218245361",
+    "firebase_url": "https://inha-taxi.firebaseio.com",
+    "project_id": "inha-taxi",
+    "storage_bucket": "inha-taxi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581218245361:android:bb1127718eff7da69ce750",
+        "android_client_info": {
+          "package_name": "com.inhataxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581218245361-l03saanj6epg9b9hebq9cp7nmvqhi93v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inhataxi",
+            "certificate_hash": "4f490b43cad47c8caa3eb0ebf8b9542008ab47e0"
+          }
+        },
+        {
+          "client_id": "581218245361-1gtu47n6bqi2d9vvf24aipma3n4l119c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inhataxi",
+            "certificate_hash": "0539a298123ec30132071df52db6b33f1525184e"
+          }
+        },
+        {
+          "client_id": "581218245361-i1a4k5efjdlef13d6ti1l9jbn0ru3dk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWCs98EuRmL3n1boc84Wa1Pn4Kv778Zio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581218245361-i1a4k5efjdlef13d6ti1l9jbn0ru3dk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

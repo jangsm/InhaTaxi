@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="locale"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorWhite"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/fragment_home_btn_hamburger"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="customOnClick"
+                app:srcCompat="@drawable/btn_hamberger" />
+
+            <TextView
+                android:id="@+id/fragment_home_tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:lineSpacingExtra="8sp"
+                android:text="INHATAXI"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp">
+                    <RelativeLayout
+                        android:id="@+id/rl_go_school"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:onClick="onClick"
+                        android:padding="5dp"
+                        android:background="@drawable/list_chat_room_boarder">
+
+                        <ImageView
+                            android:id="@+id/iv_go_school"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_go_school"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="등 교"
+                            android:textStyle="bold"
+                            android:textColor="#008cf0"
+                            android:textAlignment="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignStart="@+id/iv_go_school" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="목적지를 인하대학교로 고정합니다."
+                            android:textStyle="bold"
+                            android:textColor="#008cf0"
+                            android:textAlignment="textEnd"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignEnd="@+id/iv_go_school"
+                            android:layout_alignBottom="@+id/iv_go_school"
+                            />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_go_home"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:onClick="onClick"
+                        android:padding="5dp"
+                        android:background="@drawable/list_chat_room_boarder">
+
+                        <ImageView
+                            android:id="@+id/iv_go_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_go_home"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="하 교"
+                            android:textStyle="bold"
+                            android:textColor="#008cf0"
+                            android:textAlignment="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignStart="@+id/iv_go_home"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="출발지를 인하대학교로 고정합니다."
+                            android:textStyle="bold"
+                            android:textColor="#008cf0"
+                            android:textAlignment="textEnd"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_alignEnd="@+id/iv_go_home"
+                            android:layout_alignBottom="@+id/iv_go_home"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="인하 뉴스"
+                    android:textSize="14sp"
+                    android:layout_marginStart="44dp"
+                    android:textStyle="bold"
+                    android:textColor="#282d2d"/>
+
+                <com.github.demono.AutoScrollViewPager
+                    android:id="@+id/home_vp_event_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:stopWhenTouch="true"
+                    app:slideInterval="5000"
+                    app:slideDirection="right"
+                    app:slideDuration="5000"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘의 날씨"
+                        android:textSize="14sp"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#282d2d" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/weatherimg"
+                            android:layout_marginEnd="10dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/sunny"/>
+                        <TextView
+                            android:id="@+id/temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="온도"
+                            android:textStyle="bold"
+                            android:textColor="#282d2d"
+                            android:textSize="18sp"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/max_min_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="최고 최소 온도"
+                        android:textColor="#282d2d"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="14sp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="통합대기 환경지수(CMI): "
+                            android:textColor="#282d2d"/>
+                        <TextView
+                            android:id="@+id/cmi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:text="상태"
+                            android:textColor="#282d2d"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/round"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:padding="20dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/dust1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/finedust1" />
+
+                            <TextView
+                                android:id="@+id/finedustName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/dust1"
+                                android:gravity="center"
+                                android:text="미세먼지"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/finedust"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/finedustName"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toRightOf="@id/dust1"
+                                android:gravity="center"
+                                android:text="123"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/finedustGrade"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/finedust"
+                                android:layout_toRightOf="@id/dust1"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="3dp"
+                                android:text="미세먼지"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/dust2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/finedust2" />
+
+                            <TextView
+                                android:id="@+id/finedustName2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/dust2"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="초미세먼지"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/finedust2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/finedustName2"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toRightOf="@id/dust2"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="123"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/finedustGrade2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/finedust2"
+                                android:layout_toRightOf="@id/dust2"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="3dp"
+                                android:text="미세먼지"
+                                android:textColor="#ffffff"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/custom_drawble_layout" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

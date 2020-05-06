@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Impolice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Login-Page" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- jQuery  -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+
+    <!-- App js -->
+    <script src="assets/js/jquery.core.js"></script>
+    <script src="assets/js/jquery.app.js"></script>
+
+
+    <style type="text/css">
+        html {
+            width: 125%;
+            height: 125%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            transform: scale(0.8);
+            transform-origin: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        if (sessionStorage.getItem('tmpId')!=null || localStorage.getItem('autoId')!=null) {
+            location.href='page-receipt.html';
+        }
+    </script>
+
+    <!-- Begin page -->
+    <div class="accountbg"
+        style="background: url('assets/images/inha_background_img.png');background-size: cover;background-position: center;">
+    </div>
+
+    <div class="wrapper-page account-page-full">
+
+        <div class="card">
+            <div class="card-block">
+
+                <div class="account-box">
+
+                    <div class="card-box p-5">
+                        <h2 class="text-uppercase text-center pb-4">
+                            <a href="page-login.html" class="text-success">
+                                <span><img src="assets/images/impolice_text_logo.png" alt="" height="90"></span>
+                            </a>
+                        </h2>
+
+                        <form class="" action="#">
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="emailaddress" style="font-weight: 400; float: left;">ID</label>
+                                    <input class="form-control" id="emailaddress" required=""
+                                        placeholder="Enter your ID">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <label for="password" style="font-weight: 400; float: left;">Password</label>
+                                    <input class="form-control" type="password" required="" id="password"
+                                        placeholder="Enter your password">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-12">
+
+                                    <div class="checkbox checkbox-custom">
+                                        <input id="remember" type="checkbox" checked="false">
+                                        <label for="remember">
+                                            Remember me
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row text-center">
+                                <div class="col-12">
+                                    <input type="button" id="btn_login"
+                                        class="btn btn-block btn-custom waves-effect waves-light" onclick="login();"
+                                        value="Sign In">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function login() {
+                $.ajax({
+                    type: "POST",
+                    url: "http://apis.impolice.net/adminLogin",
+                    dataType: 'text',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        "adminId": $("#emailaddress").val(),
+                        "adminPw": $("#password").val()
+                    }),
+                    success: function (data) {
+                        var obj = JSON.parse(data);
+
+                        if (obj.code == 100) {
+                            if ($('input:checkbox[id="remember"]').is(":checked") == true) {
+                               localStorage.setItem('autoId', $("#emailaddress").val());
+                               localStorage.setItem('autoPw', $("#password").val());
+                               localStorage.setItem('jwt',obj.jwt);
+                                //local storage에 자동로그인 저장
+                            }
+                            else {
+                                sessionStorage.setItem('tmpId', $("#emailaddress").val());
+                                sessionStorage.setItem('tmpPw', $("#password").val());
+                                sessionStorage.setItem('jwt', obj.jwt);
+                                //자동로그인 x
+                            }
+                            location.href = 'page-receipt.html';
+                        }
+                        else {
+                            alert("아이디 혹은 패스워드가 틀렸습니다");
+                        }
+                    },
+
+                    error: function (request, status, error) {
+                        alert("code = " + request.status + " message = " + request.responseText + " error = " + error); // 실패 시 처리
+                    }
+
+                });
+            }
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>

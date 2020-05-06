@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_go_school"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        >
+
+        <ImageView
+            android:id="@+id/iv_go_school"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_go_school"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="등 교"
+            android:textStyle="bold"
+            android:textColor="#008cf0"
+            android:textAlignment="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignStart="@+id/iv_go_school"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="목적지를 인하대학교로 고정합니다."
+            android:textStyle="bold"
+            android:textColor="#008cf0"
+            android:textAlignment="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignEnd="@+id/iv_go_school"
+            android:layout_alignBottom="@+id/iv_go_school"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_go_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="onClick"
+        >
+
+        <ImageView
+            android:id="@+id/iv_go_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_go_home"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="하 교"
+            android:textStyle="bold"
+            android:textColor="#008cf0"
+            android:textAlignment="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignStart="@+id/iv_go_home"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="출발지를 인하대학교로 고정합니다."
+            android:textStyle="bold"
+            android:textColor="#008cf0"
+            android:textAlignment="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignEnd="@+id/iv_go_home"
+            android:layout_alignBottom="@+id/iv_go_home"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

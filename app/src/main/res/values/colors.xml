@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009fe5</color>
+    <color name="colorPrimaryDark">#009fe5</color>
+    <color name="colorAccent">#009fe5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGray">#dce1e1</color>
+    <color name="colorLemon">#fff200</color>
+    <color name="colorTransGray">#A3DCE1E1</color>
+    <color name="colorBlack">#282d2d</color>
+    <color name="colorCommentGray">#828282</color>
+    <color name="colorLightGray">#f2f7f7</color>
+    <color name="colorTrans">#00000000</color>
+    <color name="colorWriteComment">#6e7373</color>
+    <color name="colorEditHint">#b4b9b9</color>
+</resources>

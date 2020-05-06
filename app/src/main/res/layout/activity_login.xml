@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sign_in_tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textSize="32sp"
+            android:textColor="@color/colorWhite"
+            android:text="정상적으로\n로그아웃 되었습니다."
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/sign_in_tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textSize="32sp"
+            android:textColor="@color/colorWhite"
+            android:text="로그인/\n회원가입"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+    <EditText
+        android:id="@+id/sing_in_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
+        android:hint="아이디"
+        android:textColorHint="@color/colorGray"
+        android:textColor="@color/colorGray"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp"
+        android:theme="@style/EditTheme" />
+
+
+    <EditText
+        android:id="@+id/sing_in_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="30dp"
+        android:hint="비밀번호"
+        android:textColor="@color/colorGray"
+        android:textColorHint="@color/colorGray"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        android:theme="@style/EditTheme" />
+
+    <ImageView
+        android:id="@+id/sing_in_iv_sign_in"
+        android:layout_marginStart="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="customOnClick"
+        android:enabled="false"
+        app:srcCompat="@drawable/ic_login" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+    <TextView
+        android:id="@+id/sing_in_tv_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:onClick="customOnClick"
+        android:padding="10dp"
+        android:text="이메일/비밀번호 찾기"
+        />
+
+
+    <TextView
+        android:id="@+id/sing_in_tv_sing_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        android:lineSpacingExtra="6sp"
+        android:text="INHATAXI가 처음이신가요? 회원가입"
+        android:onClick="customOnClick"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+</LinearLayout>

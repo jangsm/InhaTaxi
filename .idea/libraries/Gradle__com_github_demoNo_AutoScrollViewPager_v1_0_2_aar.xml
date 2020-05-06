@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.demoNo:AutoScrollViewPager:v1.0.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fa4d1a86aa177c45031cf2a8651f41ab/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fa4d1a86aa177c45031cf2a8651f41ab/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.demoNo/AutoScrollViewPager/v1.0.2/24d843ecfee52fb3f589bcc00619fd960d1687cf/AutoScrollViewPager-v1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

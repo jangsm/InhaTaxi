@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Inha Taxi</string>
+
+    <!-- Exception Strings -->
+    <string name="error_default">서버와의 연결이 원활하지 않습니다</string>
+    <string name="error_network">네트워크 상태가 좋지 않아요</string>
+    <string name="error_null">값을 불러오는데 실패했습니다</string>
+    <string name="denied_access">올바르지 않은 접근입니다</string>
+    <string name="get_api_example">GET API Example</string>
+    <string name="get_api_path_variable_example">GET API Path Variable Example</string>
+    <string name="post_api_body_data_example">POST API Body Data Example</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="school_certification_permission">권한요청에 동의 해주셔야 이용 가능합니다. 설정에서 권한 허용 하시기 바랍니다</string>
+    <string name="school_certification_image_error">이미지 처리 오류입니다. 다시 시도해주세요.</string>
+
+
+</resources>
